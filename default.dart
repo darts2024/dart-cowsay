@@ -13,7 +13,7 @@
       "Docker": {
         "Entrypoint": [
           "/usr/games/cowsay",
-          {{if .Message}}{{.Message}}{{else}}"Pass me an input called Message, like darts run cowsay:v0.1.0 -i Message=moo"{{end}}
+          {{if .Message}}{{.Message}}{{else}}"Pass me an input called Message, like darts run cowsay:v0.1.3 -i Message=moo"{{end}}
         ],
         "Image": "grycap/cowsay@sha256:fad516b39e3a587f33ce3dbbb1e646073ef35e0b696bcf9afb1a3e399ce2ab0b"
       },
@@ -22,7 +22,7 @@
         "Type": "None"
       },
       "PublisherSpec": {
-        "Type": "IPFS"
+        "Type": "local"
       },
       "Resources": {
         "GPU": ""
