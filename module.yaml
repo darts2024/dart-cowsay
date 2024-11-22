@@ -1,0 +1,34 @@
+Job:
+  APIVersion: V1beta2
+  Metadata:
+    ClientID: 4a25766004c13f7eeb02dae891110ef2153be773e1b05d73b0f73e5d7e25972c
+    CreatedAt: "2024-11-22T00:03:27.625997461Z"
+    ID: 4d16c664-76c0-49e1-92dd-7e9dfa326e71
+    Requester:
+      RequesterNodeID: QmZBaudijmkdpLWW1GHfmjqmanppHHPU8wTcRryHkyFbez
+  Spec:
+    Deal:
+      Concurrency: 1
+    Docker: {}
+    EngineSpec:
+      Params:
+        Entrypoint: null
+        EnvironmentVariablets: []
+        Image: grycap/cowsay@sha256:fad516b39e3a587f33ce3dbbb1e646073ef35e0b696bcf9afb1a3e399ce2ab0b
+        Parameters:
+        - /usr/games/cowsay
+        - Hiro
+        WorkingDirectory: ""
+      Type: docker
+    Network:
+      Type: None
+    Outputs:
+    - Name: outputs
+      Path: /outputs
+    PublisherSpec:
+      Type: local
+    Resources:
+      GPU: ""
+    Timeout: 1800
+    Wasm:
+      EntryModule: {}
