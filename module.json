@@ -33,7 +33,7 @@
       "Network": {
         "Type": "None"
       },
-      "Timeout": 1800,
+      "Timeout": 120,
       "Outputs": [
         {
           "Name": "outputs",
