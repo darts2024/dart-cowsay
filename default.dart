@@ -27,7 +27,7 @@
       "Resources": {
         "GPU": ""
       },
-      "Timeout": 120,
+      "Timeout": 500,
       "Verifier": "Noop"
     }
   }
