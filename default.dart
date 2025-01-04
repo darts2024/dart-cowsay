@@ -1,34 +1,35 @@
 {
-  "machine": {
-    "gpu": 0,
-    "cpu": 100,
-    "ram": 100
+  machine: {
+    gpu: 0,
+    cpu: 100,
+    ram: 100,
   },
-  "job": {
-    "APIVersion": "V1beta1",
-    "Spec": {
-      "Deal": {
-        "Concurrency": 1
+  job: {
+    APIVersion: "V1beta1",
+    Spec: {
+      Deal: {
+        Concurrency: 1,
       },
-      "Docker": {
-        "Entrypoint": [
+      Docker: {
+        Entrypoint: [
           "/usr/games/cowsay",
-          {{if .Message}}{{.Message}}{{else}}"Pass me an input called Message, like darts run cowsay:v1.0.0 -i Message=moo"{{end}}
+          if std.extVar("Message") != null then std.extVar("Message")
+          else "Pass me an input called Message, like darts run cowsay:v1.0.0 -i Message=moo",
         ],
-        "Image": "ghcr.io/darts2024/cowsay:v1.0.0"
+        Image: "ghcr.io/darts2024/cowsay:v1.0.0",
       },
-      "Engine": "Docker",
-      "Network": {
-        "Type": "None"
+      Engine: "Docker",
+      Network: {
+        Type: "None",
       },
-      "PublisherSpec": {
-        "Type": "local"
+      PublisherSpec: {
+        Type: "local",
       },
-      "Resources": {
-        "GPU": ""
+      Resources: {
+        GPU: "",
       },
-      "Timeout": 500,
-      "Verifier": "Noop"
-    }
-  }
+      Timeout: 500,
+      Verifier: "Noop",
+    },
+  },
 }
