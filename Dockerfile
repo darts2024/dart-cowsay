@@ -1,5 +1,7 @@
-FROM alpine:latest
+FROM grycap/cowsay as cowsay
 
-RUN apk add --no-cache cowsay
+FROM scratch
 
+
+COPY --from=cowsay /usr/games/cowsay /bin/cowsay
 ENTRYPOINT ["cowsay"]
