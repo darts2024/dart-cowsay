@@ -1,6 +1,5 @@
-local getExt(varName, default) =
+local getExt(varName, default) = 
   if std.extVar(varName) != null then std.extVar(varName) else default;
-
 
 {
   machine: {

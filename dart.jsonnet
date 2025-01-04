@@ -1,7 +1,9 @@
 local getExt(varName, default) =
-  if std.objectHas(std, varName) then std.extVar(varName) else default;
+  if varName in std.objectFields(std.objectFields)
+  then std.extVar(varName)
+  else default;
 
-
+  
 {
   machine: {
     gpu: 0,
