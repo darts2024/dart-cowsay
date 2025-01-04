@@ -1,6 +1,6 @@
 {
   "Name": "docker job",
-  "Type": "ops",
+  "Type": "batch",
   "Count": 1,
   "Tasks": [
     {
