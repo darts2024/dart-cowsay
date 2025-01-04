@@ -1,7 +1,10 @@
-FROM grycap/cowsay as cowsay
+FROM grycap/cowsay as downloader
 
-FROM scratch
+FROM alpine
 
 
-COPY --from=cowsay /usr/games/cowsay /bin/cowsay
+COPY --from=downloader /usr/games/cowsay /bin/cowsay
+
+RUN /bin/cowsay
+
 ENTRYPOINT ["cowsay"]
