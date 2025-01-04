@@ -1,5 +1,5 @@
 local getExt(varName, default) =
-  if std.objectHas(std, varName) then std.extVar(varName) else default;
+  if std.extVar(varName) != null then std.extVar(varName) else default;
 
 
 {
