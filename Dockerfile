@@ -8,4 +8,4 @@ RUN apk update && \
   rm -rf /var/cache/apk/* /var/tmp/* /tmp/* && \
   apk del git
 
-ENTRYPOINT ["cowsay"]
+ENTRYPOINT ["/usr/local/bin/cowsay"]
