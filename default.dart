@@ -14,7 +14,7 @@
         "Parameters":[
           {{if .Message}}{{.Message}}{{else}}"Pass me an input called Message, like darts run cowsay:v1.0.0 -i Message=moo"{{end}}
         ],
-        "Image": "ghcr.io/darts2024/cowsay:{{ or ._Hash "latest"}}"
+        "Image": "ghcr.io/darts2024/cowsay:latest"
       },
       "Engine": "Docker",
       "Network": {
